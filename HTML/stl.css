@@ -1,0 +1,30 @@
+html {
+    background-color: rgb(50, 49, 53);
+}
+
+body {
+    margin: 0;
+}
+
+#header_style {
+    background-color: rgb(3, 3, 119);
+}
+
+header *{
+    display: inline-block;
+    color: white;
+}
+
+.target_Cnf{
+    display: inline-block;
+    background-color: rgb(182, 220, 255);
+    width: 250px;
+    height: 250px;
+
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+
+    text-align: center;
+
+}
