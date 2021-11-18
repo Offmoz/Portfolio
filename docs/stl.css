@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Nordic_Alternative_Regular';
-    src: url('/Nordic_Alternative_Regular.ttf') format("truetype");
+    src: url('Nordic_Alternative_Regular.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
