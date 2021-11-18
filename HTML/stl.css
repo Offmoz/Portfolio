@@ -1,4 +1,4 @@
-/*----------------------------                                                    CSS INDEX                                          --------------------------*/
+/*----------------------------                                                    CSS INDEX - HEAD_ZONE                                    --------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -37,7 +37,7 @@ body {
 
 #head_zone {
     margin: 0%;
-    height: 663px;
+    height: 100vh;
 }
 #header_style {
     padding: 10px;
@@ -102,7 +102,8 @@ body {
     width: 180px;
     height: 144px;
     top: 30%;
-    left: 43.5%;
+    left: 50%;
+    transform: translateX(-50%);
 
     margin: 0;
 
@@ -155,24 +156,22 @@ body {
     width: 35px;
     height: 25px;
 
-    left: 48.72%;
+    left: 50%;
+    transform: translateX(-50%);
 
 }
-
-#boton-Relocate-Down {
-
+.boton_Relocate_Down {
     transition: 300ms ease;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
-    background-color: rgba(174, 147, 43,0.700);
+    background-color: rgba(0, 0, 0,0.300);
     bottom: 5%;
-
 }
-#boton-Relocate-Down:hover{
+.boton_Relocate_Down:hover{
     clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
 }
 
-#boton-Relocate-Up {
+.boton_Relocate_Up {
 
     transition: 300ms ease;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -181,209 +180,105 @@ body {
     top: 5%;
 
 }
-#boton-Relocate-Up:hover{
+.boton_Relocate_Up:hover{
     clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
 }
 
 
-
+/*
 #limit_seccion_head {
 
     position: absolute;
     margin: 0%;
     right: 0px;
     bottom: 0px;
+    z-index: 100;
 
     width: 100%;
     height: 5px;
     background-color: rgb(251,253,240);
 
 }
+*/
+/*----------------------------                                                    CSS INDEX - TECH_ZONE                                    --------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+.zone_Config {
 
-#targets_zone {
-
-    min-height: 659px;
-    margin-top: 0;
-    background-color: rgb(174, 147, 43);
-    box-sizing: border-box;
     position: relative;
+    height: 100vh;
+    margin: 0;
+    border-top: 2.5px solid azure;
 
 
-    padding-top: 200px;
+
+}
+#tech_Zone {
+
+    background-color: gray;
+
+}
+#me_Zone {
+
+    background-color: rgb(80, 80, 80);
+
+}
+#proyects_Zone {
+
+    background-color: rgb(53, 25, 6);
 
 }
 
-.target_Cnf{
+#bar_Menu {
 
-    transition: 300ms ease;
+    position: fixed;
+    z-index: 3;
 
-    width: 250px;
-    height: 250px;
-
-    margin: 10px 25px 0 25px;
-    border-radius: 4px;
-
-    box-sizing: border-box;
-    background-color: black;
-    color: ivory;
-    position: relative;
-
-
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    text-decoration-line: none;
+    text-decoration: none;
 
-}
-.target_Cnf:hover{
-
-    width: 260px;
-    height: 260px;
-
-    margin: 0 35px 5px 35px;
-
-
-    position: relative;
-    margin-top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-
-}
-
-#targets {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-}
-
-#imagen_Tecnologias {
-
-    width: 55%;
-    height: 50%;
-
-    margin: 40px;
-    margin-left: 60px;
-
-    box-sizing: border-box;
-    background-size: 100% 100%;
-    background-image: url('Images/portTechs/tecnologiasIcon.png');
-
-
-}
-
-
-.no_Events {
-
-    pointer-events: none;
-    background-color: rgba(0, 0, 0, 0.300);
-
-}
-
-
-#footer_page {
-
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-
-}
-#footer_page *{
-    display: inline-block;
-}
-
-/*----------------------------                                                    CSS TECNOLOGIAS                                          --------------------------*/
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-#body_Tecnologias {
-
-}
-#background_Color {
-
-    position: absolute;
-    width: 100%;
-    height: 137%;
+    width: 50%;
+    height: 25px;
 
     margin: 0;
 
-    z-index: -1;
-
-    background-Color: rgb(88, 88, 88);
+    background-color: rgba(0, 0, 0, 0.213);
 
 }
-
-#home_Button {
-
-    position: absolute;
-
-    transition: 300ms ease;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
-    width: 25px;
-    height: 35px;
-
-    top: 1%;
-    left: 0.85%;
-
-    background-color: rgba(174, 147, 43,0.700);
-
-}
-#home_Button:hover {
-
-    clip-path: polygon(0 50%, 100% 0, 100% 100%, 100% 100%);
-
-}
-
-#tecnologias {
-    min-height: 663px;
-
-
-    box-sizing: border-box;
-}
-
-
-#content_Flex_Tecnologias {
+#contenedor_Flex_BarMenu {
 
     display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+    justify-content: space-around;
 
+}
+.a_BarMenu_Config {
+
+    transition: all 300ms ease;
+
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    color: black;
+
+    padding: 3.3px;
+
+    height: 25px;
+    width: 85px;
+
+    background-color: rgba(238, 238, 238, 0.679);
 
 }
 
+.a_BarMenu_Config:hover {
 
-.config_Targets_Tecnologias h2, p{
-    margin: 0px;
-}
-.config_Targets_Tecnologias img {
-    float: right;
-}
-.config_Targets_Tecnologias {
+    color: rgba(135, 127, 27, 0.515);
 
-    display: inline-block;
-
-    transition: 300ms ease;
-    clip-path: polygon(80% 0, 100% 0, 100% 100%, 80% 100%);
-
-    padding-right: 1%;
-    margin: 5px 0 5px 0;
-    border-left: 0 solid black;
-    border-radius: 5px;
-
-    width: 70%;
-    height: 140px;
-
-    background-color: rgba(94, 69, 28, 0.72);
-
-    text-align: left;
-
-
-}
-.config_Targets_Tecnologias:hover{
-
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    border-left: 8px solid rgb(0, 0, 0);
+    background-color: rgb(238, 238, 238);
 
 }
 

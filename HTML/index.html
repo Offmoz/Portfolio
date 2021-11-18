@@ -11,10 +11,19 @@
 
     <body>
 
+        <div id="bar_Menu" class="bar_Menu_config">
+            <div id="contenedor_Flex_BarMenu">
+                <a href="#tech_Zone" class="a_BarMenu_Config">Tecnologias</a>
+                <a href="#me_Zone" class="a_BarMenu_Config">Sobre Mi</a>
+                <a href="mailto:lucastf@gmail.com" class="a_BarMenu_Config">Contactame</a>
+                <a href="#proyects_Zone" class="a_BarMenu_Config">Proyectos</a>
+                <a href="#head_zone" class="a_BarMenu_Config">Volver</a>
+            </div>
+        </div>
+
         <figure id="color_Background_A" class="config_Background">
             <p id="developer">Developer</p>
         </figure>
-
         <figure id="color_Background_B" class="config_Background">
             <p id="back-End">Back-End</p>
         </figure>
@@ -35,33 +44,34 @@
                 </div>
                 <figure id="backEnd_Logo"></figure>
 
-                <a id="boton-Relocate-Down" class="relocate-Config" href="#targets_zone"></a>
-
-                <figure id="limit_seccion_head"></figure>
+                <a id="boton_Relocate_tech_Zone" class="relocate-Config boton_Relocate_Down" href="#tech_Zone"></a>
 
         </section>
 
-        <div id="targets_zone">
 
-            <a id="boton-Relocate-Up" class="relocate-Config" href="#head_zone"></a>
 
-            <section id="targets">
 
-                <a id="target_SobreMi" class="target_Cnf no_Events">
-                    <h2>Sobre mi</h2>
-                </a>
 
-                <a id="target_Proyectos" class="target_Cnf no_Events">
-                    <h2>Proyectos</h2>
-                </a>
+        <section id="tech_Zone" class="zone_Config">
+            <a id="boton_Relocate_head_Zone" class="relocate-Config boton_Relocate_Up" href="#head_zone"></a>
 
-                <a id="target_Tecnologias" class="target_Cnf" href="tecnologias.html">
-                    <h2>Tecnologias</h2>
-                    <figure id="imagen_Tecnologias"></figure>
-                </a>
+            <a id="boton_Relocate_me_Zone" class="relocate-Config boton_Relocate_Down" href="#me_Zone"></a>
+        </section>
 
-            </section>
-        </div>
+        <section id="me_Zone" class="zone_Config">
+            <a id="boton_Relocate_head_Zone" class="relocate-Config boton_Relocate_Up" href="#tech_Zone"></a>
+
+
+
+            <a id="boton_Relocate_proyects_Zone" class="relocate-Config boton_Relocate_Down" href="#proyects_Zone"></a>
+        </section>
+
+        <section id="proyects_Zone" class="zone_Config">
+            <a id="boton_Relocate_proyects_Zone" class="relocate-Config boton_Relocate_Up" href="#me_Zone"></a>
+
+
+
+        </section>
 
     </body>
 </html>
