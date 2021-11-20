@@ -4,12 +4,12 @@
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 #HTML-INDEX {
     scroll-behavior: smooth;
-    overflow: hidden;
+
 }
 
 @font-face {
     font-family: 'Nordic_Alternative_Regular';
-    src: url('src/Nordic_Alternative_Regular.ttf') format("truetype");
+    src: url('/docs/src/Fonts/Ttf/Nordic_Alternative_Regular.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -17,6 +17,60 @@
 body {
     margin: 0;
 }
+
+#bar_Menu {
+
+    position: fixed;
+    z-index: 3;
+
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-decoration: none;
+
+    width: 50%;
+    height: 35px;
+
+    margin: 0;
+
+    background-color: rgba(0, 0, 0, 0.213);
+
+
+}
+#contenedor_Flex_BarMenu {
+
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: 4.75px;
+
+}
+.a_BarMenu_Config {
+
+    transition: all 300ms ease;
+
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    color: black;
+
+    padding: 3.3px;
+
+    height: 25px;
+    width: 85px;
+
+    background-color: rgba(238, 238, 238, 0.679);
+
+}
+.a_BarMenu_Config:hover {
+
+    color: rgba(135, 127, 27, 0.515);
+
+    background-color: rgb(238, 238, 238);
+
+}
+
 
 .config_Background {
     position: absolute;
@@ -77,12 +131,12 @@ body {
 }
 .URL_GitHub {
 
-    background-image: url('Images/Icons/GitHubLogo.png');
+    background-image: url('/docs/src/Images/Icons/GitHubLogo.png');
 
 }
 .URL_LinkedIn {
 
-    background-image: url('Images/Icons/LinkedInLogo.png');
+    background-image: url('/docs/src/Images/Icons/LinkedInLogo.png');
 
 }
 .URL_Messagge {
@@ -90,7 +144,7 @@ body {
     height: 30px;
     width: 35px;
     background-size: cover;
-    background-image: url('Images/Icons/MensaggeIcon.png')
+    background-image: url('/docs/src/Images/Icons/MensaggeIcon.png')
 
 }
 
@@ -108,7 +162,7 @@ body {
     margin: 0;
 
     background-size: 100% 100%;
-    background-image: url('Images/Icons/BackEndIcon.png');
+    background-image: url('/docs/src/Images/Icons/BackEndIcon.png');
 
 
     z-index: 3;
@@ -212,14 +266,127 @@ body {
     margin: 0;
     border-top: 2.5px solid azure;
 
+}
+#content_Flex_Flexs {
+    display: flex;
+    height: 80%;
 
-
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 #tech_Zone {
 
     background-color: gray;
 
 }
+.tech_Content_Flex {
+
+    display: flex;
+
+    width: 49.5%;
+    min-width: 470px;
+    max-width: 700px;
+    height: 23.85%;
+    min-height: 155px;
+
+    justify-content: space-around;
+
+    padding-top: 12px;
+
+}
+.tech_Target_Config {
+
+    transition: all 200ms ease;
+
+    box-sizing: border-box;
+
+    width: 150px;
+    min-width: 141px;
+    min-height: 141px;
+
+    margin: 0 1px 0 1px;
+
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0 83%);
+
+    text-align: center;
+    vertical-align: super;
+
+    background-color: rgb(250, 250, 250);
+
+
+}
+.tech_Target_Config:hover {
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    margin: 0 15px 0 15px;
+
+
+}
+
+
+.info_Config {
+
+    width: 49.5%;
+    min-width: 470px;
+    max-width: 700px;
+    height: 21.7%;
+    min-height: 140px;
+
+    background-color: rgba(151, 151, 151, 0.878);
+    border: 1.5px ;
+    color: white;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    z-index: 2;
+
+}
+.info_P_Config {
+
+    position: absolute;
+
+    color: white;
+
+    top: 8px;
+    left: 0;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    z-index: 3;
+
+}
+
+#java_Tech:hover ~ #java_Info {
+
+    background-color: blue;
+
+}
+
+
+#JavaScript_Tech {
+
+    filter: blur(2.5px) grayscale(9);
+
+
+}
+.iconTech {
+    width: 85%;
+    height: 81%;
+}
+.nameTech {
+    height: 17%;
+    margin: 0;
+    line-height: 155%;
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(250, 250, 250);
+    background-color: rgb(80, 80, 80);
+}
+
 #me_Zone {
 
     background-color: rgb(80, 80, 80);
@@ -231,54 +398,8 @@ body {
 
 }
 
-#bar_Menu {
-
-    position: fixed;
-    z-index: 3;
-
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    text-decoration: none;
-
-    width: 50%;
-    height: 25px;
-
-    margin: 0;
-
-    background-color: rgba(0, 0, 0, 0.213);
-
-}
-#contenedor_Flex_BarMenu {
-
-    display: flex;
-    justify-content: space-around;
-
-}
-.a_BarMenu_Config {
-
-    transition: all 300ms ease;
-
-    text-decoration: none;
-    text-align: center;
-    box-sizing: border-box;
-    color: black;
-
-    padding: 3.3px;
-
-    height: 25px;
-    width: 85px;
-
-    background-color: rgba(238, 238, 238, 0.679);
-
+.visibility_Hidden {
+    visibility: hidden;
 }
 
-.a_BarMenu_Config:hover {
-
-    color: rgba(135, 127, 27, 0.515);
-
-    background-color: rgb(238, 238, 238);
-
-}
 
