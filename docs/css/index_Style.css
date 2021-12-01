@@ -8,66 +8,124 @@
 }
 
 @font-face {
+    font-family: 'QuickSandM';
+    src: url('/docs/src/Fonts/Ttf/Quicksand.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Nordic_Alternative_Regular';
     src: url('/docs/src/Fonts/Ttf/Nordic_Alternative_Regular.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Flow_Rounded';
+    src: url('/docs/src/Fonts/Ttf/FlowRounded.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
+    font-family: 'QuickSandM';
     margin: 0;
 }
 
-#bar_Menu {
+.display_None {
+    display: none;
+}
 
+#bar_Menu {
     position: fixed;
     z-index: 3;
-
     top: 1px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     text-decoration: none;
-
     width: 50%;
-    height: 35px;
-
+    max-width: 340px;
+    height: 30px;
     margin: 0;
-
-    background-color: rgba(0, 0, 0, 0.213);
-
-
+    background-color: rgba(255, 255, 255, 0.494);
 }
-#contenedor_Flex_BarMenu {
+#bar_Menu_641px {
+    position: fixed;
+    z-index: 3;
+    left: 100%;
+    transform: translateX(-100%);
+    width: 35px;
+    height: 40px;
+    margin: 0;
+    padding-left: 11px;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    background-image: url('/docs/src/Images/Icons/list_Icon.png');
+    color: white;
+}
+#label_Icon_BarMenuOpener {
+    margin: 0 0 40px -11px;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 255, 0);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.display_641px {
+    visibility: hidden;
+}
+.display_None_641px {
+    display: block;
+}
+@media (max-width: 641px){
+    #bar_Menu {
+        display: none;
+    }
+    .display_None_641px{
+        visibility: hidden;
+    }
+    .display_641px{
+        visibility: visible;
+    }
+}
 
+
+
+.contenedor_Flex_BarMenu {
     display: flex;
-    justify-content: space-around;
-
-    padding-top: 4.75px;
-
 }
 .a_BarMenu_Config {
+    transition: all 150ms ease;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    color: black;
+    padding: 4.5px 0 0 0;
+    height: 30px;
+    width: 90px;
+}
+.a_BarMenu_Config_641px {
 
-    transition: all 300ms ease;
+    transition: all 150ms ease;
 
     text-decoration: none;
     text-align: center;
     box-sizing: border-box;
     color: black;
 
-    padding: 3.3px;
+    padding: 4.5px 0 0 0;
 
-    height: 25px;
-    width: 85px;
-
-    background-color: rgba(238, 238, 238, 0.679);
+    height: 30px;
+    width: 90px;
 
 }
 .a_BarMenu_Config:hover {
 
-    color: rgba(135, 127, 27, 0.515);
+    color: rgb(255, 255, 255);
 
-    background-color: rgb(238, 238, 238);
+    background-color: rgba(0, 0, 0, 0.878);
 
 }
 
@@ -75,7 +133,7 @@ body {
 .config_Background {
     position: absolute;
     width: 50%;
-    height: 100%;
+    height: 663px;
     margin: 0%;
     z-index: -1;
 }
@@ -90,8 +148,9 @@ body {
 }
 
 #head_zone {
+    position: relative;
     margin: 0%;
-    height: 100vh;
+    height: 663px;
 }
 #header_style {
     padding: 10px;
@@ -106,7 +165,7 @@ body {
     font-family: 'Nordic_Alternative_regular';
     font-size: 150%;
 
-    color: rgb(217, 217, 217);
+    color: rgb(0, 13, 111);
 }
 #p_Redes {
     float: right;
@@ -150,23 +209,16 @@ body {
 
 
 #backEnd_Logo {
-
     position: absolute;
-
     width: 180px;
     height: 144px;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
-
     margin: 0;
-
     background-size: 100% 100%;
     background-image: url('/docs/src/Images/Icons/BackEndIcon.png');
-
-
-    z-index: 3;
-
+    z-index: 2;
 }
 #back-End {
 
@@ -238,31 +290,93 @@ body {
     clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
 }
 
+/*----------------------------                                                    CSS INDEX - ME_ZONE                                      --------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#me_Zone {
 
-/*
-#limit_seccion_head {
-
-    position: absolute;
-    margin: 0%;
-    right: 0px;
-    bottom: 0px;
-    z-index: 100;
-
-    width: 100%;
-    height: 5px;
-    background-color: rgb(251,253,240);
+    background-color: rgb(80, 80, 80);
 
 }
-*/
+
+#buttons_Content_Flex {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 120px;
+    height: 25px;
+    margin: 580px 0 0 50% ;
+    padding: 4px 0 4px 0;
+    transform: translateX(-50%);
+}
+.me_Switch_Buttons {
+    transition: all 150ms ease;
+    background-color: rgba(238, 238, 238, 0.679);
+    padding: 0 2px 0 2px;
+    border-radius: 100%;
+    width: 13px;
+    height: 13px;
+    box-sizing: border-box;
+}
+.me_Switch_Buttons:hover {
+    background-color: rgba(255, 255, 255, 0.802);
+    cursor: pointer;
+}
+
+#metas_Proyectos_B:checked ~ #metas_Proyectos{
+    visibility: visible;
+}
+#metas_Proyectos_B:checked ~ #label_Proyectos{
+    background-color: blue;
+}
+#general_Me_B:checked ~ #general_Me{
+    visibility: visible;
+}
+#gustos_Me_B:checked ~ #gustos_Me {
+    visibility: visible;
+}
+#estudios_Trabajos_Experiencias_B:checked ~ #estudios_Trabajos_Experiencias{
+    visibility: visible;
+}
+
+.targets_Me_Config {
+    position: absolute;
+    transition: all 150ms ease;
+    min-width: 400px;
+    width: 29.90%;
+    max-height: 400px;
+    min-height: 70%;
+    margin: 0;
+    border-radius: 3px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.33);
+    visibility: hidden;
+}
+@media (max-width: 360px){
+    .targets_Me_Config{
+        min-width: 340px;
+        max-height: 400px;
+    }
+}
+
+
 /*----------------------------                                                    CSS INDEX - TECH_ZONE                                    --------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+#tech_Zone {
+    background-color: gray;
+}
 .zone_Config {
 
     position: relative;
     height: 100vh;
+    min-height: 663px;
     margin: 0;
     border-top: 2.5px solid azure;
 
@@ -276,11 +390,7 @@ body {
     align-items: center;
     justify-content: space-around;
 }
-#tech_Zone {
 
-    background-color: gray;
-
-}
 .tech_Content_Flex {
 
     display: flex;
@@ -296,6 +406,12 @@ body {
     padding-top: 12px;
 
 }
+@media (max-width: 360px){
+    .tech_Content_Flex{
+        min-width: 360px;
+        min-height: 155px;
+    }
+}
 .tech_Target_Config {
 
     transition: all 200ms ease;
@@ -310,18 +426,28 @@ body {
 
     clip-path: polygon(0 0, 100% 0, 100% 83%, 0 83%);
 
+    border-radius: 5px;
+
     text-align: center;
     vertical-align: super;
 
-    background-color: rgb(250, 250, 250);
+    background-color: rgba(250, 250, 250, 0.85);
 
 
+}
+@media (max-width: 360px){
+    .tech_Target_Config{
+        width: 120px;
+        min-width: 100px;
+        height: 101px;
+        min-height: 141px;
+    }
 }
 .tech_Target_Config:hover {
 
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     margin: 0 15px 0 15px;
-
+    background-color: rgb(250, 250, 250);
 
 }
 
@@ -344,14 +470,23 @@ body {
     z-index: 2;
 
 }
+@media (max-width: 360px){
+    .info_Config{
+        min-width: 300px;
+        height: 21.7%;
+        min-height: 140px;
+    }
+}
 .info_P_Config {
 
+    transition: all 100ms ease;
     position: absolute;
+    visibility: hidden;
 
     color: white;
 
-    top: 8px;
-    left: 0;
+    top: 40%;
+    margin-left: -25%;
 
     box-sizing: border-box;
 
@@ -361,17 +496,12 @@ body {
 }
 
 #java_Tech:hover ~ #java_Info {
-
-    background-color: blue;
-
+    visibility: visible;
 }
 
 
 #JavaScript_Tech {
-
     filter: blur(2.5px) grayscale(9);
-
-
 }
 .iconTech {
     width: 85%;
@@ -387,19 +517,12 @@ body {
     background-color: rgb(80, 80, 80);
 }
 
-#me_Zone {
-
-    background-color: rgb(80, 80, 80);
-
-}
+/*----------------------------                                                    CSS INDEX - PROYECTS_ZONE                                --------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 #proyects_Zone {
 
     background-color: rgb(53, 25, 6);
 
 }
-
-.visibility_Hidden {
-    visibility: hidden;
-}
-
-

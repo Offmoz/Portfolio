@@ -1,118 +1,139 @@
 <!DOCTYPE html>
 <html lang="es" id="HTML-INDEX">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel=StyleSheet href="css/index_Style.css" type="text/css">
-
         <title>Portfolio</title>
     </head>
 
     <body>
 
-        <div id="bar_Menu" class="bar_Menu_config">
-            <div id="contenedor_Flex_BarMenu">
-                <a href="#tech_Zone" class="a_BarMenu_Config">Tecnologias</a>
+        <nav id="bar_Menu" class="bar_Menu_config">
+            <div class="contenedor_Flex_BarMenu">
                 <a href="#me_Zone" class="a_BarMenu_Config">Sobre Mi</a>
-                <a href="mailto:lucastf@gmail.com" class="a_BarMenu_Config">Contactame</a>
+                <a href="#tech_Zone" class="a_BarMenu_Config">Tecnologias</a>
                 <a href="#proyects_Zone" class="a_BarMenu_Config">Proyectos</a>
-                <a href="#head_zone" class="a_BarMenu_Config">Volver</a>
+                <a href="mailto:lucastf@gmail.com" class="a_BarMenu_Config">Contactame</a>
             </div>
-        </div>
-
+        </nav>
+        <nav id="bar_Menu_641px" class="bar_Menu_config_641px display_641px">
+            <input class="display_None" id="list_Bar_Menu_Opener" name="list_Bar_Menu" type="radio"> 
+            <label id="label_Icon_BarMenuOpener" for="list_Bar_Menu_Opener">AAAA</label>
+            <label id="label_Icon_BarMenuOpener" for="list_Bar_Menu_Opener">AAAA</label>
+            <div class="bar_Menu_641px">
+                <!-- <a href="#me_Zone" class="a_BarMenu_Config">Sobre Mi</a>
+                <a href="#tech_Zone" class="a_BarMenu_Config">Tecnologias</a>
+                <a href="#proyects_Zone" class="a_BarMenu_Config">Proyectos</a>
+                <a href="mailto:lucastf@gmail.com" class="a_BarMenu_Config">Contactame</a> -->
+            </div>
+        </nav>
         <figure id="color_Background_A" class="config_Background">
             <p id="developer">Developer</p>
         </figure>
         <figure id="color_Background_B" class="config_Background">
             <p id="back-End">Back-End</p>
         </figure>
-
         <section id="head_zone">
-
-                <div id="header_style">
-
-                    <p id="principal_Name">Offmoz</p>
-
-
-                    <div id="p_Redes">
-                        <a class="URL_LinkedIn URL_Config" href="https://www.linkedin.com/in/lucastf" target="_blank"></a>
-                        <a class="URL_GitHub URL_Config" href="https://github.com/Offmoz" target="_blank"></a>
-                        <!--<a class="URL_Messagge" href="mailto:lucastf.11.01@gmail.com"></a>-->
-                    </div>
-
+            <div id="header_style">
+                <p id="principal_Name">Offmoz</p>
+                <div id="p_Redes" class="display_None_641px">
+                    <a class="URL_LinkedIn URL_Config" href="https://www.linkedin.com/in/lucastf" target="_blank"></a>
+                    <a class="URL_GitHub URL_Config" href="https://github.com/Offmoz" target="_blank"></a>
+                    <!--<a class="URL_Messagge" href="mailto:lucastf.11.01@gmail.com"></a>-->
                 </div>
-                <figure id="backEnd_Logo"></figure>
-
-                <a id="boton_Relocate_tech_Zone" class="relocate-Config boton_Relocate_Down" href="#tech_Zone"></a>
-
+            </div>
+            <figure id="backEnd_Logo"></figure>
+            <!-- <a id="boton_Relocate_me_Zone" class="relocate-Config boton_Relocate_Down" href="#me_Zone"></a> -->
         </section>
+        <section id="me_Zone" class="zone_Config">
+            <!-- <a id="boton_Relocate_head_Zone" class="relocate-Config boton_Relocate_Up" href="#head_zone"></a> -->
+            <input id="metas_Proyectos_B" class="display_None" type="radio" name="me_Target"></input>
+            <input id="general_Me_B" class="display_None" type="radio" name="me_Target"></input>
+            <input id="gustos_Me_B" class="display_None" type="radio" name="me_Target"></input>
+            <input id="estudios_Trabajos_Experiencias_B" class="display_None" type="radio" name="me_Target"></input>
+            <div id="buttons_Content_Flex">
+                <label id="label_Proyectos" for="metas_Proyectos_B" class="me_Switch_Buttons"></label>
+                <label for="general_Me_B" class="me_Switch_Buttons"></label>
+                <label for="gustos_Me_B" class="me_Switch_Buttons"></label>
+                <label for="estudios_Trabajos_Experiencias_B" class="me_Switch_Buttons"></label>
+            </div>
+            <figure id="metas_Proyectos" class="targets_Me_Config">
+                <p>
+                    Como proyecto personal, quiero encontrarme con mi
+                    actual pareja, la cual vive lejos de mi.<br>
+                    Nosotros comenzamos a estudiar con esos fines
+                    buscando un trabajo con esto que nos fascina.
+                </p>
 
+                <br>
+                <p>
+                    Mi proyecto como desarrollador java, principalmente es
+                    "AnimaText", el cual es un programa que redacta o cuenta
+                    cualquier histoia de forma dinamica y divertida.<br>
+                    Lo que busco con el es darles a los lectores, un nuevo
+                    mundo en el cual adentrarse.
+                </p>
+
+                <br>
+                <p>
+                    "HeavenFall" se llamaba un pequeño videojuego de rol
+                    que de interfal tenia la CMD.<br>
+                    Fue mi primer proyecto, desarrollado en C++ con unas cuantas
+                    horas invertidas.
+                </p>
+            </figure>
+            <figure id="general_Me" class="targets_Me_Config">
+                <p>2</p>
+            </figure>
+            <figure id="gustos_Me" class="targets_Me_Config">
+                <p>3</p>
+            </figure>
+            <figure id="estudios_Trabajos_Experiencias" class="targets_Me_Config">
+                <p>4</p>
+            </figure>
+            <!-- <a id="boton_Relocate_tech_Zone" class="relocate-Config boton_Relocate_Down" href="#tech_Zone"></a> -->
+        </section>
         <section id="tech_Zone" class="zone_Config">
-            <a id="boton_Relocate_head_Zone" class="relocate-Config boton_Relocate_Up" href="#head_zone"></a>
-
+            <!-- <a id="boton_Relocate_proyects_Zone" class="relocate-Config boton_Relocate_Up" href="#me_Zone"></a> -->
             <div id="content_Flex_Flexs">
                 <div id="content_Tech_A"class="tech_Content_Flex">
-
-                    <div id="java_Tech" class="tech_Target_Config">
-                        <img class="iconTech" src="/docs/src/Images/portTechs/javaTech.png" alt="Icono de Java">
-                        <p class="nameTech">Java 11 SE</p>
-                    </div>
-
-
-                    <div id="HTML_Tech" class="tech_Target_Config">
-                        <img class="iconTech" src="/docs/src/Images/portTechs/htmlTech.png" alt="Icono de Java">
-                        <p class="nameTech">HTML</p>
-                    </div>
-
-                    <div id="CSS_Tech" class="tech_Target_Config">
-                        <img class="iconTech" src="/docs/src/Images/portTechs/cssTech.png" alt="Icono de Java">
-                        <p class="nameTech">CSS</p>
-                    </div>
-
-                </div>
-
-                <figure class="info_Config">
-
-                </figure>
-
-                <div id="content_Tech_B" class="tech_Content_Flex">
-
-                    <div id="GIT_Tech" class="tech_Target_Config">
-                        <img class="iconTech" src="/docs/src/Images/portTechs/gitTech.png" alt="Icono de Java">
-                        <p class="nameTech">GIT</p>
-                    </div>
-
                     <div id="MYSQL_Tech" class="tech_Target_Config">
                         <img class="iconTech" src="/docs/src/Images/portTechs/mySQL_Tech.png" alt="Icono de Java">
                         <p class="nameTech">MySQL</p>
                     </div>
-
+                    <div id="java_Tech" class="tech_Target_Config">
+                        <img class="iconTech" src="/docs/src/Images/portTechs/javaTech.png" alt="Icono de Java">
+                        <p class="nameTech">Java 11 SE</p>
+                    </div>
                     <div id="JavaScript_Tech" class="tech_Target_Config">
                         <img class="iconTech" src="/docs/src/Images/portTechs/javaScript_Tech.png" alt="Icono de Java">
                         <p class="nameTech">*******</p>
                     </div>
-
+                </div>
+                <figure class="info_Config">
+                </figure>
+                <div id="content_Tech_B" class="tech_Content_Flex">
+                    <div id="HTML_Tech" class="tech_Target_Config">
+                        <img class="iconTech" src="/docs/src/Images/portTechs/htmlTech.png" alt="Icono de Java">
+                        <p class="nameTech">HTML</p>
+                    </div>
+                    <div id="GIT_Tech" class="tech_Target_Config">
+                        <img class="iconTech" src="/docs/src/Images/portTechs/gitTech.png" alt="Icono de Java">
+                        <p class="nameTech">GIT</p>
+                    </div>
+                    <div id="CSS_Tech" class="tech_Target_Config">
+                        <img class="iconTech" src="/docs/src/Images/portTechs/cssTech.png" alt="Icono de Java">
+                        <p class="nameTech">CSS</p>
+                    </div>
                 </div>
             </div>
-
-            <a id="boton_Relocate_me_Zone" class="relocate-Config boton_Relocate_Down" href="#me_Zone"></a>
+            <!-- <a id="boton_Relocate_proyects_Zone" class="relocate-Config boton_Relocate_Down" href="#proyects_Zone"></a> -->
         </section>
-
-        <section id="me_Zone" class="zone_Config">
-            <a id="boton_Relocate_head_Zone" class="relocate-Config boton_Relocate_Up" href="#tech_Zone"></a>
-
-
-
-            <a id="boton_Relocate_proyects_Zone" class="relocate-Config boton_Relocate_Down" href="#proyects_Zone"></a>
-        </section>
-
         <section id="proyects_Zone" class="zone_Config">
-            <a id="boton_Relocate_proyects_Zone" class="relocate-Config boton_Relocate_Up" href="#me_Zone"></a>
-
-
-
+            <!-- <a id="boton_Relocate_head_Zone" class="relocate-Config boton_Relocate_Up" href="#tech_Zone"></a> -->
         </section>
-
     </body>
 </html>
