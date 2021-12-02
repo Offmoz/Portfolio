@@ -19,24 +19,27 @@
                 <a href="mailto:lucastf@gmail.com" class="a_BarMenu_Config">Contactame</a>
             </div>
         </nav>
-        <nav id="bar_Menu_641px" class="bar_Menu_config_641px display_641px">
-            <input class="display_None" id="list_Bar_Menu_Opener" name="list_Bar_Menu" type="radio"> 
+        <nav id="bar_Menu_Buttom_641px" class="bar_Menu_config_641px display_641px">
+            <input class="display_None" id="list_Bar_Menu_Opener" name="list_Bar_Menu" type="radio">
             <label id="label_Icon_BarMenuOpener" for="list_Bar_Menu_Opener">AAAA</label>
             <label id="label_Icon_BarMenuOpener" for="list_Bar_Menu_Opener">AAAA</label>
             <div class="bar_Menu_641px">
-                <!-- <a href="#me_Zone" class="a_BarMenu_Config">Sobre Mi</a>
+                <input class="display_None" id="list_Bar_Menu_Closer" name="list_Bar_Menu" type="radio">
+                <label id="label_Closer_Button" for="list_Bar_Menu_Closer">x</label>
+                <a href="#me_Zone" class="a_BarMenu_Config">Sobre Mi</a>
                 <a href="#tech_Zone" class="a_BarMenu_Config">Tecnologias</a>
                 <a href="#proyects_Zone" class="a_BarMenu_Config">Proyectos</a>
-                <a href="mailto:lucastf@gmail.com" class="a_BarMenu_Config">Contactame</a> -->
+                <a href="mailto:lucastf@gmail.com" class="a_BarMenu_Config">Contactame</a>
             </div>
         </nav>
-        <figure id="color_Background_A" class="config_Background">
+        <!-- <figure id="color_Background_A" class="config_Background">
             <p id="developer">Developer</p>
         </figure>
         <figure id="color_Background_B" class="config_Background">
             <p id="back-End">Back-End</p>
-        </figure>
+        </figure> -->
         <section id="head_zone">
+            <div id="fondo_headZone" class="background_Image_Config"></div>
             <div id="header_style">
                 <p id="principal_Name">Offmoz</p>
                 <div id="p_Redes" class="display_None_641px">
@@ -45,10 +48,19 @@
                     <!--<a class="URL_Messagge" href="mailto:lucastf.11.01@gmail.com"></a>-->
                 </div>
             </div>
-            <figure id="backEnd_Logo"></figure>
+            <figure id="backEnd_Logo">
+                <img id="left_Arrow" src="src/Images/Icons/Left.png" alt="Left_Arrow">
+                    <div id="appearance_Animation">
+                        <img id="highe_Gear" class="animation_Gear" src="src/Images/Icons/highe_Gear.png" alt="gear">
+                        <img id="medium_Gear" class="animation_Gear" src="src/Images/Icons/medium_Gear.png" alt="gear">
+                        <img id="minor_Gear" class="animation_Gear" src="src/Images/Icons/minor_Gear.png" alt="gear">
+                    </div>
+                <img id="right_Arrow" src="src/Images/Icons/Right.png" alt="Right_Arrow">
+            </figure>
             <!-- <a id="boton_Relocate_me_Zone" class="relocate-Config boton_Relocate_Down" href="#me_Zone"></a> -->
         </section>
         <section id="me_Zone" class="zone_Config">
+            <div id="fondo_MeZone" class="background_Image_Config"></div>
             <!-- <a id="boton_Relocate_head_Zone" class="relocate-Config boton_Relocate_Up" href="#head_zone"></a> -->
             <input id="metas_Proyectos_B" class="display_None" type="radio" name="me_Target"></input>
             <input id="general_Me_B" class="display_None" type="radio" name="me_Target"></input>
@@ -97,6 +109,7 @@
             <!-- <a id="boton_Relocate_tech_Zone" class="relocate-Config boton_Relocate_Down" href="#tech_Zone"></a> -->
         </section>
         <section id="tech_Zone" class="zone_Config">
+            <div id="fondo_TechZone" class="background_Image_Config"></div>
             <!-- <a id="boton_Relocate_proyects_Zone" class="relocate-Config boton_Relocate_Up" href="#me_Zone"></a> -->
             <div id="content_Flex_Flexs">
                 <div id="content_Tech_A"class="tech_Content_Flex">
@@ -133,6 +146,7 @@
             <!-- <a id="boton_Relocate_proyects_Zone" class="relocate-Config boton_Relocate_Down" href="#proyects_Zone"></a> -->
         </section>
         <section id="proyects_Zone" class="zone_Config">
+            <div id="fondo_ProyectZone" class="background_Image_Config"></div>
             <!-- <a id="boton_Relocate_head_Zone" class="relocate-Config boton_Relocate_Up" href="#tech_Zone"></a> -->
         </section>
     </body>

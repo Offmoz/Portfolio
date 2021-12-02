@@ -35,6 +35,13 @@ body {
     display: none;
 }
 
+.background_Image_Config {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 #bar_Menu {
     position: fixed;
     z-index: 3;
@@ -49,7 +56,7 @@ body {
     margin: 0;
     background-color: rgba(255, 255, 255, 0.494);
 }
-#bar_Menu_641px {
+#bar_Menu_Buttom_641px {
     position: fixed;
     z-index: 3;
     left: 100%;
@@ -61,7 +68,6 @@ body {
     background-color: rgba(0, 0, 0, 0);
     background-size: 100% 100%;
     background-image: url('/docs/src/Images/Icons/list_Icon.png');
-    color: white;
 }
 #label_Icon_BarMenuOpener {
     margin: 0 0 40px -11px;
@@ -72,6 +78,28 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.bar_Menu_641px {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 300ms ease;
+    top: 0;
+    left: 46px;
+    width: 200px;
+    height: 250px;
+    background-color: rgb(179, 179, 179);
+    text-align: center;
+
+}
+#label_Closer_Button {
+    font-size: 27px;
+    cursor: pointer;
+}
+#label_Closer_Button:hover {
+    background-color: rgba(0, 0, 0, 0.878);
+    color: rgb(179, 179, 179);
 }
 .display_641px {
     visibility: hidden;
@@ -90,6 +118,9 @@ body {
         visibility: visible;
     }
 }
+#list_Bar_Menu_Opener:checked ~ .bar_Menu_641px {
+    left: -154.51px;
+}
 
 
 
@@ -105,28 +136,22 @@ body {
     padding: 4.5px 0 0 0;
     height: 30px;
     width: 90px;
+    z-index: 100;
 }
-.a_BarMenu_Config_641px {
-
-    transition: all 150ms ease;
-
-    text-decoration: none;
-    text-align: center;
-    box-sizing: border-box;
-    color: black;
-
-    padding: 4.5px 0 0 0;
-
-    height: 30px;
-    width: 90px;
-
+@media (max-width:641px) {
+    .a_BarMenu_Config {
+        transition: all 150ms ease;
+        text-decoration: none;
+        box-sizing: border-box;
+        color: black;
+        padding: 17px 0 0 0;
+        height: 60px;
+        width: 100%;
+    }
 }
 .a_BarMenu_Config:hover {
-
-    color: rgb(255, 255, 255);
-
     background-color: rgba(0, 0, 0, 0.878);
-
+    color: rgb(179, 179, 179);
 }
 
 
@@ -146,7 +171,9 @@ body {
     left: 0;
     background-color: rgb(88, 88, 88);
 }
-
+#fondo_headZone {
+    background-image: url('/docs/src/Images/BackGrounds/Stars.png');
+}
 #head_zone {
     position: relative;
     margin: 0%;
@@ -165,94 +192,148 @@ body {
     font-family: 'Nordic_Alternative_regular';
     font-size: 150%;
 
-    color: rgb(0, 13, 111);
+    color: rgb(162, 162, 162);
 }
 #p_Redes {
     float: right;
     margin: 0px;
 }
 
-
-
 .URL_Config:hover {
     background-color: rgba(182, 220, 255, 0.378);
 
 }
 .URL_Config {
-
     transition: 300ms ease;
     height: 34px;
     width: 35px;
     background-size: cover;
     border-radius: 17px;
     margin: -3px 6px 0px 0px;
-
 }
 .URL_GitHub {
-
     background-image: url('/docs/src/Images/Icons/GitHubLogo.png');
-
 }
 .URL_LinkedIn {
-
     background-image: url('/docs/src/Images/Icons/LinkedInLogo.png');
-
 }
-.URL_Messagge {
-
-    height: 30px;
-    width: 35px;
-    background-size: cover;
-    background-image: url('/docs/src/Images/Icons/MensaggeIcon.png')
-
-}
-
 
 #backEnd_Logo {
     position: absolute;
     width: 180px;
-    height: 144px;
+    height: 130px;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    background-size: 100% 100%;
-    background-image: url('/docs/src/Images/Icons/BackEndIcon.png');
     z-index: 2;
 }
-#back-End {
-
+#left_Arrow {
     position: absolute;
+    margin: -5% 0 0 -7%;
+    z-index: 5;
+    animation: 0.8s;
+    animation-name: left_Arrow_Animation;
+}
+@keyframes left_Arrow_Animation {
+    from {
+        margin: -5% 0 0 18%;
+    }
+    to {
+        margin: -5% 0 0 -7%;
+    }
+}
+#appearance_Animation {
+    position: absolute;
+    opacity: 1;
+    width: 100px;
+    height: 100px;
+    flex-direction: column;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    animation-name: gears_Appearance;
+    animation-duration: 0.9s;
+}
+@keyframes gears_Appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#right_Arrow {
+    position: absolute;
+    margin: 12% 0 0 78%;
+    z-index: 15;
+    animation: 0.8s;
+    animation-name: rigth_Arrow_Animation;
+}
+@keyframes rigth_Arrow_Animation {
+    from {
+        margin: 12% 0 0 50%;
+    }
+    to {
+        margin: 12% 0 0 78%;
+    }
+}
+.animation_Gear {
+    position: absolute;
+    animation-name: gear_Animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes gear_Animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#highe_Gear {
+    width: 118px;
+    height: 118px;
+    z-index: 9;
+    margin: -8.5% 0 0 -8.5%;
+}
+#medium_Gear {
+    margin: -25% 0 0 45%;
+    z-index: 11;
+}
+#minor_Gear {
+    margin: 55% 0 0 -12%;
+    z-index: 8;
+    animation-name: minor_gear_Animation;
+}
+@keyframes minor_gear_Animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
 
+#back-End {
+    position: absolute;
     margin: 0;
-
     right: 2px;
     top: 55%;
-
     color: rgb(179, 179, 179);
-
     font-size: 2rem;
-
     z-index: 3;
-
-
 }
 #developer {
-
     position: absolute;
-
     margin: 0;
-
     left: 2px;
     top: 55%;
-
     color: rgb(179, 179, 179);
-
     font-size: 2rem;
-
     z-index: 3;
-
-
 }
 
 
@@ -294,10 +375,9 @@ body {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-#me_Zone {
 
-    background-color: rgb(80, 80, 80);
-
+#fondo_MeZone {
+    background-image: url('/docs/src/Images/BackGrounds/minimalistWite.jpg');
 }
 
 #buttons_Content_Flex {
@@ -312,7 +392,7 @@ body {
 }
 .me_Switch_Buttons {
     transition: all 150ms ease;
-    background-color: rgba(238, 238, 238, 0.679);
+    background-color: rgba(133, 133, 133, 0.679);
     padding: 0 2px 0 2px;
     border-radius: 100%;
     width: 13px;
@@ -320,15 +400,12 @@ body {
     box-sizing: border-box;
 }
 .me_Switch_Buttons:hover {
-    background-color: rgba(255, 255, 255, 0.802);
+    background-color: rgba(63, 63, 63, 0.802);
     cursor: pointer;
 }
 
 #metas_Proyectos_B:checked ~ #metas_Proyectos{
     visibility: visible;
-}
-#metas_Proyectos_B:checked ~ #label_Proyectos{
-    background-color: blue;
 }
 #general_Me_B:checked ~ #general_Me{
     visibility: visible;
@@ -353,13 +430,17 @@ body {
     left: 50%;
     transform: translateX(-50%);
     color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.33);
+    background-color: rgba(58, 58, 58, 0.33);
     visibility: hidden;
 }
 @media (max-width: 360px){
     .targets_Me_Config{
         min-width: 340px;
         max-height: 400px;
+    }
+    #fondo_MeZone {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -369,8 +450,8 @@ body {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-#tech_Zone {
-    background-color: gray;
+#fondo_TechZone {
+    background-image: url('/docs/src/Images/BackGrounds/MinimalistGrey.jpg');
 }
 .zone_Config {
 
@@ -521,8 +602,7 @@ body {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-#proyects_Zone {
 
-    background-color: rgb(53, 25, 6);
-
+#fondo_ProyectZone {
+    background-image: url('/docs/src/Images/BackGrounds/MinimalistGrey.jpg');
 }
