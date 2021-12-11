@@ -28,19 +28,19 @@
 
 @font-face {
     font-family: 'QuickSandM';
-    src: url('/docs/src/Fonts/Ttf/Quicksand.ttf') format("truetype");
+    src: url('src/Fonts/Ttf/Quicksand.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Nordic_Alternative_Regular';
-    src: url('/docs/src/Fonts/Ttf/Nordic_Alternative_Regular.ttf') format("truetype");
+    src: url('src/Fonts/Ttf/Nordic_Alternative_Regular.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Flow_Rounded';
-    src: url('/docs/src/Fonts/Ttf/FlowRounded.ttf') format("truetype");
+    src: url('src/Fonts/Ttf/FlowRounded.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -104,7 +104,7 @@ body {
     height: 34px;
     cursor: pointer;
     background-size: 100% 100%;
-    background-image: url('/docs/src/Images/Icons/list_Icon.png');
+    background-image: url('src/Images/Icons/list_Icon.png');
     /* -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -230,10 +230,10 @@ body {
     margin: -3px 6px 0px 0px;
 }
 .URL_GitHub {
-    background-image: url('/docs/src/Images/Icons/GitHubLogo.png');
+    background-image: url('src/Images/Icons/GitHubLogo.png');
 }
 .URL_LinkedIn {
-    background-image: url('/docs/src/Images/Icons/LinkedInLogo.png');
+    background-image: url('src/Images/Icons/LinkedInLogo.png');
 }
 
 #moon_Art {
@@ -530,7 +530,7 @@ body {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* #fondo_ProyectZone {
-    background-image: url('/docs/src/Images/BackGrounds/SkyB.png');
+    background-image: url('src/Images/BackGrounds/SkyB.png');
 } */
 
 
