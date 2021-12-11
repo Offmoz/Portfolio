@@ -28,7 +28,7 @@
 
 @font-face {
     font-family: 'QuickSandM';
-    src: url('src/Fonts/Ttf/Quicksand.ttf') format("truetype");
+    src: url('/docs/src/Fonts/Ttf/Quicksand.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
