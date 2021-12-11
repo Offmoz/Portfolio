@@ -22,6 +22,8 @@
     --status-Color-Null: rgba(172, 172, 172, 0.548);
 
     --gadgets-Color: #97a3bd;
+
+    --color-Suave-Cream: rgb(255, 244, 223);
 }
 
 @font-face {
@@ -46,6 +48,17 @@
 body {
     font-family: 'QuickSandM';
     margin: 0;
+}
+
+.zone_Config {
+
+    position: relative;
+    height: 100%;
+    min-height: 697.5px;
+    background-color: rgb( 8, 13, 19);
+    margin: 0;
+    border-top: 2.5px solid azure;
+
 }
 
 .display_None {
@@ -126,18 +139,7 @@ body {
 .display_None_641px {
     display: block;
 }
-#oultador {
-    position: fixed;
-    z-index: 4;
-    top: 0;
-    left: 100%;
-    transform: translateX(-100%);
-    width: 35px;
-    height: 40px;
-    margin: 0;
-    padding-left: 11px;
-    background-color: var(--general-Background-Color);
-}
+
 @media (max-width: 641px){
     #bar_Menu {
         display: none;
@@ -189,12 +191,12 @@ body {
     color: rgb(126, 126, 126);
 }
 
-#head_zone {
+/* #head_zone {
     position: relative;
     margin: 0%;
-    height: 663px;
+    min-height: 697.5px;
     background-color: var(--general-Background-Color);
-}
+} */
 #header_style {
     padding: 10px;
 }
@@ -294,17 +296,13 @@ body {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-#fondo_MeZone {
-    background-image: url('/docs/src/Images/BackGrounds/SkyB.png');
-}
-
 #buttons_Content_Flex {
     display: flex;
     justify-content: space-around;
     box-sizing: border-box;
     width: 120px;
     height: 25px;
-    margin: 580px 0 0 50% ;
+    margin: 590px 0 0 50% ;
     padding: 4px 0 4px 0;
     transform: translateX(-50%);
 }
@@ -313,8 +311,8 @@ body {
     background-color: rgba(133, 133, 133, 0.679);
     padding: 0 2px 0 2px;
     border-radius: 100%;
-    width: 13px;
-    height: 13px;
+    width: 17px;
+    height: 17px;
     box-sizing: border-box;
 }
 .me_Switch_Buttons:hover {
@@ -337,12 +335,14 @@ body {
 
 .targets_Me_Config {
     position: absolute;
+    box-sizing: border-box;
     transition: all 150ms ease;
     min-width: 400px;
     width: 29.90%;
     max-height: 400px;
     min-height: 70%;
     margin: 0;
+    padding: 5px;
     border-radius: 3px;
     top: 10%;
     left: 50%;
@@ -351,14 +351,37 @@ body {
     background-color: var(--gadgets-Color);
     visibility: hidden;
 }
+.targets_Me_Config {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    margin:0;
+    padding: 0 8px 10px 8px;
+}
+.general_P_Config {
+    margin: 0;
+    background-color: var(--color-Suave-Cream);
+    margin: 0 0 10px 0;
+    padding: 7px 0 7px 0;
+    border-radius: 1.5px;
+}
 @media (max-width: 360px){
+    #buttons_Content_Flex {
+        width: 300px;
+        height: 25px;
+    }
     .targets_Me_Config{
         min-width: 340px;
-        max-height: 400px;
+        min-height: 530px;
+        overflow: scroll;
     }
-    #fondo_MeZone {
-        width: 100%;
-        height: 100%;
+    .me_Switch_Buttons {
+        border-radius: 15%;
+        width: 50px;
+        height: 17px;
+    }
+    #buttons_Content_Flex {
+        margin: 625px 0 0 50% ;
     }
     #moon_Art {
         width: 340px;
@@ -372,18 +395,6 @@ body {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-#fondo_TechZone {
-    background-image: url('/docs/src/Images/BackGrounds/SkyB.png');
-}
-.zone_Config {
-
-    position: relative;
-    height: 100vh;
-    min-height: 663px;
-    margin: 0;
-    border-top: 2.5px solid azure;
-
-}
 #content_Flex_Flexs {
     display: flex;
     height: 80%;
@@ -432,31 +443,44 @@ body {
     }
 }
 .tech_Target_Config:hover {
-
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     margin: 0 15px 0 15px;
     background-color: #a8b8dc;
-
+}
+.tech_Target_Config:hover ~ .repaint {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 
 .info_Config {
-
+    position: relative;
     width: 49.5%;
     min-width: 470px;
     max-width: 700px;
     height: 21.7%;
     min-height: 140px;
-
     background-color: rgba(151, 151, 151, 0.878);
     border: 1.5px ;
-    color: white;
-
     box-sizing: border-box;
-
     margin: 0;
     z-index: 2;
+}
 
+.repaint {
+    position: absolute;
+    clip-path: polygon(0 0, 1% 0, 1% 100%, 0 100%);
+    width: 49.5%;
+    min-width: 470px;
+    max-width: 700px;
+    min-height: 140px;
+    margin: -152px 0 0 0;
+    min-height: 140px;
+    z-index: 3;
+    background-color: var(--color-Suave-Cream);
+    transition: all 300ms ease;
+}
+#repaint_A {
+    margin: 156px 0 0 0;
 }
 @media (max-width: 360px){
     .info_Config{
@@ -496,8 +520,8 @@ body {
     line-height: 155%;
     text-align: center;
     vertical-align: middle;
-    color: rgb(250, 250, 250);
-    background-color: rgb(80, 80, 80);
+    color: var(--color-Suave-Cream);
+    background-color: #2e4270;
 }
 
 /*----------------------------                                                    CSS INDEX - PROYECTS_ZONE                                --------------------------*/
@@ -505,11 +529,6 @@ body {
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-#proyects_Zone {
-    min-height: 663px;
-    height: 100%;
-    background-color: rgb( 8, 13, 19);
-}
 /* #fondo_ProyectZone {
     background-image: url('/docs/src/Images/BackGrounds/SkyB.png');
 } */
@@ -522,7 +541,7 @@ body {
     justify-content: space-around;
 
     width: 80%;
-    min-height: 663px;
+    height:100%;
     margin: 70px 0 0 10%;
     padding: 5px 0 5px 0;
 }
@@ -597,45 +616,54 @@ body {
 
 
 .info_i {
-    position: relative;
     cursor: help;
-    margin: 22px 0 0 50%;
-    transform: translateX(-50%);
-    width: 15px;
-    font-size:  12px;
-    font-weight: bolder;
+    margin: -105% 0 0 101%;
+    width: 10px;
+    font-size:  18px;
     border-radius: 100%;
-    border: 2px solid black;
+    color: var(--color-Suave-Cream);
 }
 #info_MensI:hover ~ #info_Mens{
-    opacity: 1;
-    display:block;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .info_Target {
     position: absolute;
     float: center;
     text-align: left;
     box-sizing: border-box;
-    margin: 0 0 0 50%;
-    transform: translateX(-50%);
-    clip-path: polygon(0 10%,40% 10%,50% 0, 60% 10%, 100% 10%, 100% 100%, 0 100%);
-    padding: 15px 5px 5px 5px;
-    border-radius: 5px;
+    margin: 0.5px 0 0 0;
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 1%, 0 1%);
+    padding: 5px 5px 5px 5px;
     min-width: 200px;
+    height: 250px;
     background-color: rgb(255, 244, 223);
     color:rgb(0, 0, 0);
     z-index: 50;
-    opacity: 0;
-    display: none;
-    transition: all 200ms;
+    transition: all 300ms;
 }
-@media (max-width: 766px) {
-    .info_i {
-        visibility: hidden;
-    }
-    .info_Target{
-        display: none;
-    }
+
+.status_Info:hover p{
+    z-index: 20;
+    opacity: 1;
+}
+.status_Info_P {
+    position: absolute;
+    box-sizing: border-box;
+    /* min-width: 95px; */
+    margin: 22px 0 0 -5%;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: var(--color-Suave-Cream);
+    text-align: center;
+    font-size: 15px;
+    opacity: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: -10;
+    transition: all 200ms ease;
 }
 
 .url_Gadgets {
